@@ -1,0 +1,77 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.javamodularity.moduleplugin' version '1.8.12'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.beryx.jlink' version '2.25.0'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.9.1'
+}
+java{
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainModule = 'com.example.progettomgc'
+    mainClass = 'com.example.progettomgc.HelloApplication'
+}
+
+javafx {
+    version = '17.0.6'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    implementation('org.controlsfx:controlsfx:11.1.2')
+    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+
+    testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    implementation 'com.google.guava:guava:32.1.1-jre'
+
+    // https://mvnrepository.com/artifact/org.apache.jena/jena-arq
+    implementation 'org.apache.jena:jena-arq:4.8.0'
+    // https://mvnrepository.com/artifact/org.apache.jena/jena-core
+    implementation 'org.apache.jena:jena-core:4.8.0'
+    // https://mvnrepository.com/artifact/org.apache.jena/apache-jena-libs
+    implementation 'org.apache.jena:apache-jena-libs:4.8.0'
+
+    // https://mvnrepository.com/artifact/org.apache.jena/jena-base
+    testImplementation 'org.apache.jena:jena-base:4.8.0'
+    implementation 'org.slf4j:slf4j-api:1.7.5'
+    implementation 'org.slf4j:slf4j-simple:1.6.4'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jlink {
+    imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip")
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'app'
+    }
+}
+
+jlinkZip {
+    group = 'distribution'
+}

@@ -1,0 +1,12 @@
+rootProject.name = "progettoMGC"
+include 'src:main:untitled'
+findProject(':src:main:untitled')?.name = 'untitled'
+include 'src:test'
+findProject(':src:test')?.name = 'test'
+include 'src:main:test'
+findProject(':src:main:test')?.name = 'test'
+include 'src:test'
+findProject(':src:test')?.name = 'test'
+include 'src:test'
+findProject(':src:test')?.name = 'test'
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1136.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettomgc.Controller">
+   <children>
+      <MenuButton fx:id="typemenu" layoutX="175.0" layoutY="380.0" mnemonicParsing="false" text="Seleziona Tipo">
+        <items>
+          <MenuItem fx:id="typecomputer" mnemonicParsing="false" onAction="#selComputer" text="Computer" />
+          <MenuItem fx:id="typetelefono" mnemonicParsing="false" onAction="#selTelefono" text="Telefono" />
+            <MenuItem fx:id="typetelevisore" mnemonicParsing="false" onAction="#selTelevisore" text="Televisore" />
+            <MenuItem fx:id="typeaccessori" mnemonicParsing="false" onAction="#selAccessori" text="Accessori" />
+        </items>
+      </MenuButton>
+      <Button fx:id="add" layoutX="70.0" layoutY="430.0" mnemonicParsing="false" onAction="#onAddBtn" text="Aggiungi" />
+      <Button fx:id="search" layoutX="15.0" layoutY="430.0" mnemonicParsing="false" onAction="#onSearchBtn" text="Cerca" />
+      <TextField fx:id="maintxt" layoutX="15.0" layoutY="380.0" promptText="Inserisci nome prodotto" />
+      <ListView fx:id="mainList" layoutX="15.0" layoutY="15.0" prefHeight="302.0" prefWidth="541.0" />
+      <Button fx:id="btnDel" layoutX="144.0" layoutY="430.0" mnemonicParsing="false" onAction="#onDelBtn" text="Elimina" />
+      <Label layoutX="583.0" layoutY="10.0" text="Clienti" />
+      <Button fx:id="clientsearch" layoutX="743.0" layoutY="40.0" mnemonicParsing="false" onAction="#onSearchClient" text="Cerca clienti" />
+      <TextField fx:id="clienttxt" layoutX="583.0" layoutY="41.0" promptText="Nome cliente" />
+      <Button fx:id="clientadd" layoutX="833.0" layoutY="40.0" mnemonicParsing="false" onAction="#onAddClient" text="Aggiungi nuovo cliente" />
+      <Label layoutX="584.0" layoutY="346.0" text="Specifiche Prodotto" />
+      <MenuButton fx:id="STmenu" layoutX="751.0" layoutY="374.0" mnemonicParsing="false" text="Seleziona specifica">
+        <items>
+            <MenuItem fx:id="STmarca" mnemonicParsing="false" onAction="#selBrand" text="Marca" />
+          <MenuItem fx:id="STmem" mnemonicParsing="false" onAction="#selMem" text="Capacità di memoria" />
+          <MenuItem fx:id="STcon" mnemonicParsing="false" onAction="#selCon" text="Connettività" />
+            <MenuItem fx:id="STproc" mnemonicParsing="false" onAction="#selProc" text="Processore" />
+            <MenuItem fx:id="STris" mnemonicParsing="false" onAction="#selRis" text="Risoluzione" />
+            <MenuItem fx:id="STSO" mnemonicParsing="false" onAction="#selSO" text="Sistema Operativo" />
+            <MenuItem fx:id="STprice" mnemonicParsing="false" onAction="#selPrice" text="Prezzo" />
+            <MenuItem fx:id="STdisp" mnemonicParsing="false" onAction="#selDisp" text="Disponibilità" />
+        </items>
+      </MenuButton>
+      <TextField fx:id="STtxt" layoutX="581.0" layoutY="374.0" promptText="Valore specifica" />
+      <Button fx:id="STadd" layoutX="896.0" layoutY="374.0" mnemonicParsing="false" onAction="#onAddST" text="Aggiungi" />
+      <ListView fx:id="STlist" layoutX="581.0" layoutY="410.0" onMouseClicked="#onSelST" prefHeight="238.0" prefWidth="541.0" />
+      <Button layoutX="975.0" layoutY="374.0" mnemonicParsing="false" onAction="#onSelST" text="Cerca" />
+      <Separator layoutX="2.0" layoutY="329.0" prefHeight="5.0" prefWidth="1136.0" />
+      <Separator layoutX="567.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="4.0" />
+      <Label layoutX="15.0" layoutY="346.0" text="Ricerca Prodotti" />
+      <Button fx:id="specsearch" layoutX="751.0" layoutY="341.0" mnemonicParsing="false" onAction="#onspecsearch" text="Cerca tramite specifica" />
+      <Label fx:id="clientLabel" layoutX="583.0" layoutY="88.0" text="Cliente selezionato" />
+      <Button fx:id="clientsel" layoutX="743.0" layoutY="85.0" mnemonicParsing="false" onAction="#onClientSel" text="Seleziona cliente" />
+      <Button fx:id="addpurchase" layoutX="864.0" layoutY="85.0" mnemonicParsing="false" onAction="#onAddPurchase" text="Aggiungi acquisto" />
+   </children>
+</AnchorPane>

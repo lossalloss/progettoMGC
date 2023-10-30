@@ -1,0 +1,717 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:v1="http://purl.org/goodrelations/v1#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://unicam.it/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.1="http://unicam.it/negozio_di_elettronica#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns="http://unicam.it/negozio_di_elettronica/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://unicam.it/negozio_di_elettronica">
+    <rdfs:comment>Ontologia per la catalogazione e vendita di prodotti di elettronica</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sony">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Marca"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#WiFi">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Connettività"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Person">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sistema_operativo"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haSistemaOperativo">
+            <rdfs:range>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sistema_operativo"/>
+            </rdfs:range>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+        </owl:onClass>
+        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:maxQualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haSpecificheTecniche">
+            <rdfs:range rdf:resource="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Risoluzione_dello_schermo"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haRisoluzione">
+            <rdfs:range>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Risoluzione_dello_schermo"/>
+            </rdfs:range>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Capacità_di_memoria"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haCapacitàDiMemoria">
+            <rdfs:range>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Capacità_di_memoria"/>
+            </rdfs:range>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Processore"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haProcessore">
+            <rdfs:range>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Processore"/>
+            </rdfs:range>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://unicam.it/negozio_di_elettronica#haAcquistato"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Connettività"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haConnettività">
+            <rdfs:range>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Connettività"/>
+            </rdfs:range>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Accessori"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haAccessori">
+            <rdfs:range>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Accessori"/>
+            </rdfs:range>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haMarca">
+            <rdfs:range rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Disponibilità"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haDisponibilità">
+            <rdfs:range>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Disponibilità"/>
+            </rdfs:range>
+            <rdfs:domain>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            </rdfs:domain>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#HDMI">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Connettività"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Commesso">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Connettività">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Lenovo">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Manager">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prezzo"/>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#HP">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Capacità_di_memoria">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Prodotto">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Risoluzione_dello_schermo"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haRisoluzione"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+        <owl:onProperty>
+          <owl:TransitiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#èCompatibileCon"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Processore"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haProcessore"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haMarca"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://unicam.it/negozio_di_elettronica#Capacità_di_memoria"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haCapacitàDiMemoria"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Connettività"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haConnettività"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://unicam.it/negozio_di_elettronica#Prezzo"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:IrreflexiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#haPrezzo">
+            <rdfs:range rdf:resource="http://unicam.it/negozio_di_elettronica#Prezzo"/>
+            <rdfs:domain rdf:resource="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+          </owl:IrreflexiveProperty>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haSpecificheTecniche"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass>
+          <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sistema_operativo"/>
+        </owl:onClass>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haSistemaOperativo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Telefono">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#Android">
+                <rdfs:subClassOf>
+                  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sistema_operativo"/>
+                </rdfs:subClassOf>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+              </owl:NamedIndividual>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#IOS"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haSistemaOperativo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#MACOS">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sistema_operativo"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Cliente">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Computer">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Linux"/>
+              <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#MACOS"/>
+              <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#Windows">
+                <rdfs:subClassOf>
+                  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sistema_operativo"/>
+                </rdfs:subClassOf>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+              </owl:NamedIndividual>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haSistemaOperativo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Televisore">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Accessori">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#IOS">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sistema_operativo"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Disponibilità">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Risoluzione_dello_schermo">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sistema_operativo">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Linux">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Sistema_operativo"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#AMD">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Processore">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Intel">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Proprietario">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Samsung">
+    <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://unicam.it/negozio_di_elettronica#haAcquistato">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="http://unicam.it/negozio_di_elettronica#èCompatibileCon">
+    <rdfs:range rdf:resource="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+    <rdfs:domain rdf:resource="http://unicam.it/negozio_di_elettronica#Prodotto"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <j.1:Cliente rdf:about="http://unicam.it/negozio_di_elettronica#Enrico">
+    <j.1:DELL_XPS_15 rdf:resource="http://unicam.it/negozio_di_elettronica#haAcquistato"/>
+    <j.1:haAcquistato>
+      <j.1:Telefono rdf:about="http://unicam.it/negozio_di_elettronica#Oneplus_6">
+        <j.1:haSistemaOperativo rdf:resource="http://unicam.it/negozio_di_elettronica#Android"/>
+        <j.1:haRisoluzione>
+          <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#1080p"/>
+        </j.1:haRisoluzione>
+        <j.1:haPrezzo>
+          <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#500"/>
+        </j.1:haPrezzo>
+        <j.1:haMarca>
+          <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#OnePlus">
+            <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+          </owl:NamedIndividual>
+        </j.1:haMarca>
+        <j.1:haDisponibilità>
+          <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#5"/>
+        </j.1:haDisponibilità>
+        <j.1:haCapacitàDiMemoria>
+          <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#128GB"/>
+        </j.1:haCapacitàDiMemoria>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </j.1:Telefono>
+    </j.1:haAcquistato>
+    <j.1:haAcquistato>
+      <j.1:Computer rdf:about="http://unicam.it/negozio_di_elettronica#DELL_XPS_15">
+        <j.1:haSistemaOperativo rdf:resource="http://unicam.it/negozio_di_elettronica#Windows"/>
+        <j.1:haMarca>
+          <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#DELL"/>
+        </j.1:haMarca>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+      </j.1:Computer>
+    </j.1:haAcquistato>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Cliente>
+  <j.1:Telefono rdf:about="http://unicam.it/negozio_di_elettronica#Samsung_galaxy_s22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Telefono>
+  <j.1:Cliente rdf:about="http://unicam.it/negozio_di_elettronica#Francesco">
+    <j.1:haAcquistato>
+      <j.1:Accessori rdf:about="http://unicam.it/negozio_di_elettronica#Cavo_USB-USB-C">
+        <j.1:prezzo_di_vendita_al_pubblico>10</j.1:prezzo_di_vendita_al_pubblico>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </j.1:Accessori>
+    </j.1:haAcquistato>
+    <j.1:haAcquistato>
+      <j.1:Telefono rdf:about="http://unicam.it/negozio_di_elettronica#Iphone_14">
+        <j.1:haPrezzo>2000</j.1:haPrezzo>
+        <j.1:haMarca>
+          <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#apple"/>
+        </j.1:haMarca>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </j.1:Telefono>
+    </j.1:haAcquistato>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Cliente>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Cliente"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Commesso"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Manager"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Proprietario"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <j.1:Accessori rdf:about="http://unicam.it/negozio_di_elettronica#Cuffie_inEar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Accessori>
+  <j.1:Accessori rdf:about="http://unicam.it/negozio_di_elettronica#Mouse_Logitech">
+    <j.1:haPrezzo>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#20"/>
+    </j.1:haPrezzo>
+    <j.1:haMarca>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#Logitech"/>
+    </j.1:haMarca>
+    <j.1:haDisponibilità>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#50"/>
+    </j.1:haDisponibilità>
+    <j.1:haConnettività>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#USB">
+        <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Connettività"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </owl:NamedIndividual>
+    </j.1:haConnettività>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Accessori>
+  <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronicaMacbookAir"/>
+  <j.1:Cliente rdf:about="http://unicam.it/negozio_di_elettronica#Danilo">
+    <j.1:haAcquistato rdf:resource="http://unicam.it/negozio_di_elettronica#Iphone_14"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Cliente>
+  <j.1:Computer rdf:about="http://unicam.it/negozio_di_elettronica#LenovoMacbook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Computer>
+  <owl:AnnotationProperty rdf:about="http://unicam.it/negozio_di_elettronica#prezzo_di_vendita_al_pubblico"/>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#Apple">
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:allValuesFrom>
+              <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#IOS"/>
+                  <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#MACOS"/>
+                </owl:unionOf>
+              </owl:Class>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haSistemaOperativo"/>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </owl:NamedIndividual>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#HP"/>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#LG">
+        <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </owl:NamedIndividual>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Lenovo"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Samsung"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sony"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <rdf:Description rdf:about="http://unicam.it/negozio_di_elettronica#Iphone_X">
+    <j.1:haMarca rdf:resource="http://unicam.it/negozio_di_elettronica#Apple"/>
+    <j.1:haDisponibilità rdf:resource="http://unicam.it/negozio_di_elettronica#5"/>
+    <rdf:type>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Marca"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haMarca"/>
+      </owl:Restriction>
+    </rdf:type>
+    <rdf:type rdf:resource="http://unicam.it/negozio_di_elettronica#Telefono"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Accessori"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Computer"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Telefono"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Televisore"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <rdf:Description rdf:about="http://unicam.it/negozio_di_elettronica#DELL_XPS_13_9350">
+    <j.1:haMarca rdf:resource="http://unicam.it/negozio_di_elettronica#DELL"/>
+    <j.1:haSistemaOperativo rdf:resource="http://unicam.it/negozio_di_elettronica#Windows"/>
+    <j.1:haRisoluzione>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#3200x1800"/>
+    </j.1:haRisoluzione>
+    <j.1:haProcessore>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#i7-6560U"/>
+    </j.1:haProcessore>
+    <j.1:haDisponibilità>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#25"/>
+    </j.1:haDisponibilità>
+    <j.1:haCapacitàDiMemoria>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#512GB"/>
+    </j.1:haCapacitàDiMemoria>
+    <rdf:type>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Windows"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haSistemaOperativo"/>
+      </owl:Restriction>
+    </rdf:type>
+    <rdf:type rdf:resource="http://unicam.it/negozio_di_elettronica#Computer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <j.1:Computer rdf:about="http://unicam.it/negozio_di_elettronica#ASUS_probook">
+    <j.1:haProcessore rdf:resource="http://unicam.it/negozio_di_elettronica#intel_i7"/>
+    <j.1:haRisoluzione rdf:resource="http://unicam.it/negozio_di_elettronica#1080p"/>
+    <j.1:haMarca>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#ASUS"/>
+    </j.1:haMarca>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Computer>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#Android"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#IOS"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Linux"/>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#Windows"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <rdf:Description rdf:about="http://unicam.it/negozio_di_elettronica#Oneplus_5t">
+    <rdf:type>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Specifiche_tecniche"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haSpecificheTecniche"/>
+      </owl:Restriction>
+    </rdf:type>
+    <rdf:type>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Android"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haSistemaOperativo"/>
+      </owl:Restriction>
+    </rdf:type>
+    <rdf:type>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Prezzo"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haPrezzo"/>
+      </owl:Restriction>
+    </rdf:type>
+    <rdf:type>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#OnePlus"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haMarca"/>
+      </owl:Restriction>
+    </rdf:type>
+    <rdf:type>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Disponibilità"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haDisponibilità"/>
+      </owl:Restriction>
+    </rdf:type>
+    <rdf:type>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://unicam.it/negozio_di_elettronica#Accessori"/>
+        <owl:onProperty rdf:resource="http://unicam.it/negozio_di_elettronica#haAccessori"/>
+      </owl:Restriction>
+    </rdf:type>
+    <rdf:type rdf:resource="http://unicam.it/negozio_di_elettronica#Telefono"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <owl:AllDisjointClasses>
+    <owl:members rdf:parseType="Collection">
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#AMD"/>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#Apple"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#HP"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Intel"/>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#LG"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Lenovo"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Samsung"/>
+      <owl:Class rdf:about="http://unicam.it/negozio_di_elettronica#Sony"/>
+    </owl:members>
+  </owl:AllDisjointClasses>
+  <j.1:Cliente rdf:about="http://unicam.it/negozio_di_elettronica#Daniele">
+    <j.1:haAcquistato rdf:resource="http://unicam.it/negozio_di_elettronica#megascreen"/>
+  </j.1:Cliente>
+  <j.1:Computer rdf:about="http://unicam.it/negozio_di_elettronica#probook3">
+    <j.1:haMarca>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#google"/>
+    </j.1:haMarca>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Computer>
+  <j.1:Telefono rdf:about="http://unicam.it/negozio_di_elettronica#Iphone_12">
+    <j.1:haPrezzo>1000</j.1:haPrezzo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Telefono>
+  <j.1:Cliente rdf:about="http://unicam.it/negozio_di_elettronica#Leonardo">
+    <j.1:haAcquistato>
+      <j.1:Computer rdf:about="http://unicam.it/negozio_di_elettronica#MacbookAir">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      </j.1:Computer>
+    </j.1:haAcquistato>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Cliente>
+  <j.1:Computer rdf:about="http://unicam.it/negozio_di_elettronica#Macbook_pro">
+    <j.1:haMarca rdf:resource="http://unicam.it/negozio_di_elettronica#Apple"/>
+    <j.1:haConnettività>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#wi-fi"/>
+    </j.1:haConnettività>
+    <j.1:haConnettività>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#USB-C">
+        <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Connettività"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </owl:NamedIndividual>
+    </j.1:haConnettività>
+    <j.1:haConnettività>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#Bluetooth">
+        <rdfs:subClassOf rdf:resource="http://unicam.it/negozio_di_elettronica#Connettività"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </owl:NamedIndividual>
+    </j.1:haConnettività>
+    <j.1:haCapacitàDiMemoria>
+      <owl:NamedIndividual rdf:about="http://unicam.it/negozio_di_elettronica#1TB"/>
+    </j.1:haCapacitàDiMemoria>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </j.1:Computer>
+</rdf:RDF>
