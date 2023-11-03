@@ -1,7 +1,5 @@
 package com.example.progettomgc;
 
-import javafx.collections.ObservableList;
-
 import java.util.ArrayList;
 
 public interface localDB<T> {
