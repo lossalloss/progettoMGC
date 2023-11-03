@@ -10,4 +10,6 @@ public interface localDB<T> {
     T searchByName(String name);
     void remove(T e);
     void add(T e);
+    void addAll(ArrayList<T> e);
+    T get(int i);
 }

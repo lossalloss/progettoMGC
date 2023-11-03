@@ -49,4 +49,16 @@ public class Elements implements localDB{
     public void add(Object e) {
         elements.add((Element) e);
     }
+
+    @Override
+    public void addAll(ArrayList e) {
+        elements.addAll(e);
+    }
+
+    @Override
+    public Object get(int i) {
+        return elements.get(i);
+    }
+
+
 }
