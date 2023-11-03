@@ -17,7 +17,7 @@ public class Elements implements localDB{
     public ArrayList<Element> search(String type) {
         ArrayList<Element> res = new ArrayList<>();
         for(int i = 0; i < elements.size(); i++){
-            if(elements.get(i).getType()==type){
+            if(elements.get(i).getType().equals(type)){
                 res.add(elements.get(i));
             }
         }
@@ -33,7 +33,7 @@ public class Elements implements localDB{
     @Override
     public Element searchByName(String name) {
         for(int i = 0; i < elements.size(); i++){
-            if(elements.get(i).getName()==name){
+            if(elements.get(i).getName().equals(name)){
                 Element res = elements.get(i);
                 return res;
             }
