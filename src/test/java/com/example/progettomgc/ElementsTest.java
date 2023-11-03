@@ -81,4 +81,20 @@ class ElementsTest {
         // Verifica che il nome dell'elemento nel risultato corrisponda al nome cercato
         assertEquals(nameToSearch, searchResult.getName());
     }
+
+    @Test
+    void addAll(){
+        test.addAll(ont.getElements(ProductType.Accessori.name()));
+
+        ArrayList<Element> s = test.search(ProductType.Accessori.name());
+
+        //controllo che la lista di elementi non sia vuota
+        assertNotNull(s);
+
+        for(int i = 0; i < s.size(); i++){
+            //con questo assert testo anche la funzione get
+            assertEquals(s.get(i), test.get(i));
+        }
+
+    }
 }
