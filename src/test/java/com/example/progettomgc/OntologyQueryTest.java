@@ -1,6 +1,4 @@
 package com.example.progettomgc;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -42,12 +40,12 @@ class OntologyQueryTest {
     void getProperties() {
 
         ArrayList<Element> elements = test.getElements(ProductType.Computer.name());
-        for(int i = 0; i < elements.size(); i++){
+        for (Element element : elements) {
 
-            ArrayList<String> properties = test.getProperties(elements.get(i));
+            ArrayList<String> properties = test.getProperties(element);
 
             assertNotNull(properties);
-            assertEquals(properties, elements.get(i).getObjectProperties());
+            assertEquals(properties, element.getObjectProperties());
         }
     }
 }
