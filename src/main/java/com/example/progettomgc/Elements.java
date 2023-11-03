@@ -1,7 +1,6 @@
 package com.example.progettomgc;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Elements implements localDB{
 
@@ -16,9 +15,9 @@ public class Elements implements localDB{
     @Override
     public ArrayList<Element> search(String type) {
         ArrayList<Element> res = new ArrayList<>();
-        for(int i = 0; i < elements.size(); i++){
-            if(elements.get(i).getType().equals(type)){
-                res.add(elements.get(i));
+        for (Element element : elements) {
+            if (element.getType().equals(type)) {
+                res.add(element);
             }
         }
         //interrogo il database solo se non ho già salvato i risultati in locale
@@ -32,10 +31,9 @@ public class Elements implements localDB{
 
     @Override
     public Element searchByName(String name) {
-        for(int i = 0; i < elements.size(); i++){
-            if(elements.get(i).getName().equals(name)){
-                Element res = elements.get(i);
-                return res;
+        for (Element element : elements) {
+            if (element.getName().equals(name)) {
+                return element;
             }
         }
         return null;
