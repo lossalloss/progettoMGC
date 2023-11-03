@@ -42,11 +42,13 @@ public class Elements implements localDB{
 
     @Override
     public void remove(Object e){
+        checkType(e);
         elements.remove(e);
     }
 
     @Override
     public void add(Object e) {
+        checkType(e);
         elements.add((Element) e);
     }
 
@@ -60,5 +62,9 @@ public class Elements implements localDB{
         return elements.get(i);
     }
 
-
+    private void checkType(Object t){
+        if (!(t instanceof Element)) {
+            throw new IllegalArgumentException("Il parametro element deve essere istanza di ELement!");
+        }
+    }
 }
