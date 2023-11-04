@@ -56,10 +56,9 @@ public class Modifier implements QueryModifier{
      */
     @Override
     public void deleteElement(Object element) throws FileNotFoundException {
-        if (!(element instanceof Element)) {
+        if (!(element instanceof Element e)) {
             throw new IllegalArgumentException("Il parametro element deve essere istanza di Element.");
         }
-        Element e = (Element) element;
         // Carica l'ontologia dal file
         Model model = prepModel();
         String queryString = "DELETE WHERE "
@@ -77,9 +76,9 @@ public class Modifier implements QueryModifier{
         Resource individuo = model.createResource(NAMESPACE+element);
         Resource otherindividuo = model.createResource(NAMESPACE+otherElement);
 
-        Property proprietà = model.createProperty(NAMESPACE + property);
+        Property prop = model.createProperty(NAMESPACE + property);
 
-        individuo.addProperty(proprietà, otherindividuo);
+        individuo.addProperty(prop, otherindividuo);
 
         // Salva le modifiche nell'ontologia
         model.write(new FileOutputStream(ONTOLOGY_PATH), "RDF/XML");
@@ -95,11 +94,10 @@ public class Modifier implements QueryModifier{
     @Override
     public void addObjectProperty(Object element, String propertyValue, String property) throws FileNotFoundException {
         //controllo che element sia un istanza si Element
-        if (!(element instanceof Element)) {
+        if (!(element instanceof Element sourceElement)) {
             throw new IllegalArgumentException("Il parametro element deve essere istanza di ELement!");
         }
 
-        Element sourceElement = (Element) element;
         addObjectProperty(sourceElement.getName(), propertyValue, property);
     }
 }
