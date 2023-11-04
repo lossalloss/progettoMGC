@@ -89,6 +89,7 @@ public class Controller {
         mod.deleteElement(del);
         //richiamo la ricerca per dare un feedback dell' eliminazione di un elemento
         onSearchBtn();
+
     }
 
     public void onSelST(){
