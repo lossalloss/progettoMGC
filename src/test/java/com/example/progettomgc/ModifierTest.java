@@ -18,12 +18,17 @@ class ModifierTest {
     @Test
     void addElement() throws FileNotFoundException {
         // Crea un oggetto Element da aggiungere all'ontologia
-        Element elementToAdd = new Element("TestElement", ProductType.Accessori.name());
+        Element elementToAdd = new Element("TestElement", "http://unicam.it/negozio_di_elettronica#");
+        elementToAdd.setType(ProductType.Accessori.name());
 
         test.addElement(elementToAdd);
 
-        ont.getElements(ProductType.Accessori.name());
-        //da finire
+        ArrayList<Element> elements = ont.getElements(ProductType.Accessori.name());
+        for(int i = 0; i < elements.size(); i++){
+            if(elements.get(i).equals(elementToAdd)){
+                assertEquals(elements.get(i), elementToAdd);
+            }
+        }
     }
 
     @Test
