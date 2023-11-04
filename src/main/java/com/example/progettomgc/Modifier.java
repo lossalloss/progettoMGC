@@ -63,7 +63,7 @@ public class Modifier implements QueryModifier{
         // Carica l'ontologia dal file
         Model model = prepModel();
         String queryString = "DELETE WHERE "
-                + "  { <" + NAMESPACE+element + "> ?p ?o }";
+                + "  { <" + e.getFullName() + "> ?p ?o }";
 
         UpdateAction.parseExecute(queryString, model);
 
