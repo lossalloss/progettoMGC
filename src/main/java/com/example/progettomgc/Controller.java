@@ -59,11 +59,10 @@ public class Controller {
     private Elements elements = new Elements(ask);
     private ObservableList<String> listToString(ArrayList<Element> l){
         ArrayList<String> nameList = new ArrayList<>();
-        for(int i = 0; i < l.size(); i++){
-            nameList.add(l.get(i).getName());
+        for (Element element : l) {
+            nameList.add(element.getName());
         }
-        ObservableList<String> observableList = FXCollections.observableArrayList(nameList);
-        return observableList;
+        return FXCollections.observableArrayList(nameList);
     }
     public void onSearchBtn(){
         ArrayList<Element> elList = elements.search(type);
