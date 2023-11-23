@@ -14,13 +14,10 @@ class OntologyQueryTest {
         ArrayList<Element> elements = test.getElements(ProductType.Computer.name());
 
         assertNotNull(elements);
-        elements = test.getElements(ProductType.Computer.name());
+        elements = test.getElements(ProductType.Accessori.name());
 
         assertNotNull(elements);
-        elements = test.getElements(ProductType.Computer.name());
-
-        assertNotNull(elements);
-        elements = test.getElements(ProductType.Computer.name());
+        elements = test.getElements(ProductType.Telefono.name());
 
         assertNotNull(elements);
     }
