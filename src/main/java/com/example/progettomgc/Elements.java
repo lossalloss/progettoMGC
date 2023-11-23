@@ -12,6 +12,14 @@ public class Elements implements localDB{
         this.ask = ask;
     }
 
+    /**
+     * Questo metodo permette cercare nel database locale l'eventuale presenza di elementi
+     * del tipo specificato. Nel caso in cui non siano presenti gli elementi verranno
+     * ritornati interrogando l'ontologia
+     *
+     * @param type tipo da ricercare
+     * @return una lista di elementi del tipo specificato
+     */
     @Override
     public ArrayList<Element> search(String type) {
         ArrayList<Element> res = new ArrayList<>();
@@ -29,6 +37,12 @@ public class Elements implements localDB{
         return res;
     }
 
+    /**
+     * Questo metodo permette cercare nel database locale un elemento dato il nome
+     *
+     * @param name Nome dell'elemento da ricercare
+     * @return l'elemento con il nome dato oppure null se non è presente
+     */
     @Override
     public Element searchByName(String name) {
         for (Element element : elements) {
@@ -39,24 +53,46 @@ public class Elements implements localDB{
         return null;
     }
 
-
+    /**
+     * Questo metodo permette di eliminare un elemento dal database locale
+     *
+     * @param element elemento da eliminare
+     */
     @Override
-    public void remove(Object e){
-        checkType(e);
-        elements.remove(e);
+    public void remove(Object element){
+        checkType(element);
+        elements.remove(element);
     }
 
+    /**
+     * Questo metodo permette di aggiungere un elemento al database locale
+     *
+     * @param element elemento da aggiungere
+     */
     @Override
-    public void add(Object e) {
-        checkType(e);
-        elements.add((Element) e);
+    public void add(Object element) {
+        checkType(element);
+        elements.add((Element) element);
     }
 
+    /**
+     * Questo metodo permette di aggiungere una lista di elementi
+     * al database locale
+     *
+     * @param elements Lista di elementi da aggiungere
+     */
     @Override
-    public void addAll(ArrayList e) {
-        elements.addAll(e);
+    public void addAll(ArrayList elements) {
+        elements.addAll(elements);
     }
 
+    /**
+     * Questo metodo permette di ritornare l'elemento nella posizione richiesta
+     * con il parametro i
+     *
+     * @param i posizione dell'elemento che si vuole ritornare
+     * @return L'elemento nella posizione i
+     */
     @Override
     public Object get(int i) {
         return elements.get(i);

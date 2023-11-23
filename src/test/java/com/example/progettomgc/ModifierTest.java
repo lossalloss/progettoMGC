@@ -26,6 +26,7 @@ class ModifierTest {
                 assertEquals(element, elementToAdd);
             }
         }
+        //elimino l elemento per non lasciare tracce del test nell'ontologia
         test.deleteElement(elementToAdd);
     }
 
@@ -66,7 +67,7 @@ class ModifierTest {
         elementToAdd.setObjectProperties(ont.getProperties(elementToAdd));
         //controllo che le object properties siano le stesse sia nel locale che nell ontologia
         assertEquals(ont.getProperties(elementToAdd), elementToAdd.getObjectProperties());
-
+        //elimino l elemento per non lasciare tracce del test nell'ontologia
         test.deleteElement(elementToAdd);
 
     }

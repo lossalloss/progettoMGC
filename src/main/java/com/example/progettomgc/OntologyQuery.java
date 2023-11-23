@@ -105,10 +105,9 @@ public class OntologyQuery implements QueryInterrogator {
      */
     @Override
     public ArrayList<String> getProperties(Object element) {
-        if (!(element instanceof Element)) {
+        if (!(element instanceof Element e)) {
             throw new IllegalArgumentException("Il parametro element deve essere istanza di Element.");
         }
-        Element e = (Element) element;
         return getProperties(e.getName());
     }
 
